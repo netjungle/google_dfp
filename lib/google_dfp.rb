@@ -13,7 +13,7 @@ module GoogleDFP
         "",
         :id    => "dfp-#{name}",
         :class => 'google-dfp',
-        :style => "width: #{width}px; height: #{height}px",
+#        :style => "width: #{width}px; height: #{height}px",
         'data-unit' => ad['unit']
     end
   end
