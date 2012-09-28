@@ -9,11 +9,13 @@ module GoogleDFP
       
       width, height = ad['size'].split("x")
       
+      style_tag = width.to_i == 800 ? "width: #{width}px; height: auto"  : "width: #{width}px; height: #{height}px"
+
       content_tag :div,
         "",
         :id    => "dfp-#{name}",
         :class => 'google-dfp',
-#        :style => "width: #{width}px; height: #{height}px",
+        :style => style_tag,
         'data-unit' => ad['unit']
     end
   end
